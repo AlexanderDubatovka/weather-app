@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import keys from './keys'
 import Loader from './Loader'
+import uuid from 'react-uuid'
 
 const api = {
   key: keys.API_KEY,
@@ -133,7 +134,7 @@ function App() {
           </div>
           )}
           {data && data.forecast.forecastday.map(item => (
-            <div key={item.day.mintemp_c.toString()}>
+            <div key={uuid()}>
               <div className='date'>{data && item.date}</div>
               {degree === true ? (
               <div className='weather'>{data && item.day.mintemp_c}°C - {data && item.day.maxtemp_c}°C</div>
