@@ -134,7 +134,7 @@ function App() {
           </div>
           )}
           {data && data.forecast.forecastday.map(item => (
-            <div key={uuid()}>
+            <div className='container-weather-result' key={uuid()}>
               <div className='date'>{data && item.date}</div>
               {degree === true ? (
               <div className='weather'>{data && item.day.mintemp_c}°C - {data && item.day.maxtemp_c}°C</div>
@@ -143,7 +143,6 @@ function App() {
               )}
               <div className='weather'>{data && item.day.condition.text}</div>
               <div className='weather'>wind speed {data && Math.round(item.day.maxwind_kph / 3.6)} m/s</div>
-              <br /><br /><br /><br /><br />
             </div>
           ))}
         </div>

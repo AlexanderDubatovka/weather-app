@@ -146,3 +146,7 @@ button::-moz-focus-inner {
   font-weight: 700;
   text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
 }
+
+.container-weather-result {
+  margin-bottom: 5rem;
+}
