@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import keys from './keys'
-import Loader from './Loader'
+import Loader from './components/Loader'
 import uuid from 'react-uuid'
 
 const api = {
@@ -76,7 +76,7 @@ function App() {
         if (!res.ok) {
             throw Error(res)
         }
-        return res;
+        return res
       }
 
       fetch(`${api.base}key=${api.key}&q=${query}&days=3`)
